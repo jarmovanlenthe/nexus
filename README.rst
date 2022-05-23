@@ -7,3 +7,5 @@ The following plugins are added:
 - APK repository
 - Composer repository
 
+# Update
+- 2022-05-23: Upstream version bump
