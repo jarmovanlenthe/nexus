@@ -7,4 +7,3 @@ script:
 - docker build -t jarmovanlenthe/nexus .
 - docker login --username ${DOCKERHUB_USERNAME} --password ${DOCKERHUB_TOKEN}
 - docker push jarmovanlenthe/nexus
-
