@@ -4,6 +4,6 @@ services:
 - docker
 
 script:
-- docker build -t jarmovanlenthe/nexus .
+- docker build -t jarmovanlenthe/nexus:3.70.1-java11-alpine .
 - docker login --username ${DOCKERHUB_USERNAME} --password ${DOCKERHUB_TOKEN}
-- docker push jarmovanlenthe/nexus
+- docker push jarmovanlenthe/nexus:3.70.1-java11-alpine
