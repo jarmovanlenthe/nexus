@@ -1,10 +1,10 @@
 ARG NEXUS_VERSION=3.70.1-java11-alpine
 
-FROM maven:3-jdk-11-alpine AS build
+FROM maven:3-eclipse-temurin-11-alpine AS build
 RUN apk add git && git clone https://github.com/sonatype-nexus-community/nexus-repository-composer.git && \
  git clone https://github.com/sonatype-nexus-community/nexus-repository-apk.git && \
- git clone --branch issue19-update-nexus-to-3.40.1-01 https://github.com/beiriannydd/nexus-repository-cargo.git
- # git clone https://github.com/sonatype-nexus-community/nexus-repository-cargo.git
+ #git clone --branch issue19-update-nexus-to-3.40.1-01 https://github.com/beiriannydd/nexus-repository-cargo.git
+  git clone https://github.com/sonatype-nexus-community/nexus-repository-cargo.git
 
 RUN cd /nexus-repository-composer/; \
     mvn clean package -PbuildKar;
